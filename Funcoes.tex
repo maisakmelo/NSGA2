@@ -1,0 +1,115 @@
+\documentclass[letterpaper,A4pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage[pdftex]{graphicx}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage{times}
+\usepackage[left=1.5cm, right=2cm, top=1cm, bottom=2cm]{geometry}
+\usepackage{stackrel}
+\begin{document}
+
+
+\begin{description}
+\item[Função 1: Poloni's]
+
+$\stackbin[(x,y)\in\mathbb{R}^2]{}{\mathrm{min}} \left\{%
+\begin{array}{rcl}
+    f_1(x,y)&=&[1+(A_1-B_1(x,y))^2+(A_2-B_2(x,y))^2] \\
+    f_2(x,y)&=&(x+3)^2+(y+1)^2
+\end{array}%
+\right.$
+
+$-\pi\leq x,y \leq \pi$ 
+\vspace{0.5cm}
+
+onde 
+
+\vspace{0.5cm}
+
+$\left\{%
+\begin{array}{rcl}
+    A_1&=&0.5\sin(1)-2\cos(1)+\sin(2)-1.5\cos(2) \\
+    A_2&=&1.5\sin(1)-cos(1)+2\sin(2)-0.5cos(2)\\
+    B_1(x,y)&=&0.5\sin(x)-2\cos(x)+2\sin(y)-1.5\cos(y)\\
+    B_2(x,y)&=&1.5\sin(x)-\cos(x)+2\sin(y)-0.5\cos(y)
+\end{array}%
+\right.$
+
+\item[Função 2]
+
+$\stackbin[(x,y)\in\mathbb{R}^2]{}{\mathrm{min}} \left\{%
+\begin{array}{rcl}
+    f_1(x,y)&=&x \\
+    f_2(x,y)&=&\dfrac{1+y}{x}
+\end{array}%
+\right.\,\,\,\,\,\,\, 0.1\leq x\leq 1, \,\,\, 0\leq y\leq 5$
+
+\item[Função 3: Fonseca e Fleming]
+
+$\stackbin[x\in\mathbb{R}^3]{}{\mathrm{min}} \left\{%
+\begin{array}{rcl}
+    f_1(x)&=&1-\exp\left[-\displaystyle\sum_{i=1}^3\left(x_i-\dfrac{1}{\sqrt{3}}\right)^2\right]\\
+    f_2(x)&=&1-\exp\left[-\displaystyle\sum_{i=1}^3\left(x_i+\dfrac{1}{\sqrt{3}}\right)^2\right]
+\end{array}%
+\right.$
+
+$ -4\leq x_i\leq 4, \,\,\, i\in\{1,2,3\}$
+
+\item[Função 4: Zitzler-Deb-Thiele]
+
+
+$\stackbin[x\in\mathbb{R}^n]{}{\mathrm{min}} \left\{%
+\begin{array}{rcl}
+    f_1(x)&=&x_1\\
+    f_2(x)&=&1-\sqrt{\dfrac{f_1(x)}{g(x)}}-\left(\dfrac{f_1(x)}{g(x)}\right)\sin(10\pi f_1(x))
+\end{array}%
+\right.$
+
+\vspace{0.5cm}
+
+$g(x) = 1+\dfrac{9}{n-1}\displaystyle\sum_{i=2}^nx_i, \,\,\,\,\, 0\leq x_i\leq 1, i\in \{1,2,\cdots,n\}$
+
+\item[Função5: Schaffer N.1] 
+
+$\stackbin[x\in\mathbb{R}]{}{\mathrm{min}} \left\{%
+\begin{array}{rcl}
+    f_1(x)&=&x^2\\
+    f_2(x)&=&(x-2)^2
+\end{array}%
+\right.,\,\,\,\,\, -A\leq x\leq A$
+
+Valores de $A$ de 10 a $10^5$ têm sido bem sucedidos.
+Valores de $A$ maiores aumentam a dificuldade do problema
+
+\item[Função 6: Schaffer N.2]
+
+
+$\stackbin[x\in\mathbb{R}]{}{\mathrm{min}} \left\{%
+\begin{array}{rcl}
+    f_1(x)&=&\left\{%
+\begin{array}{rcl}
+   -x,&se&x\leq 1\\
+    x-2,&se&1<x\leq3\\
+    4-x,&se&3<x\leq 4\\
+    x-4,&se&x>4
+\end{array}%
+\right.\\
+    f_2(x)&=&(x-2)^2
+\end{array}%
+\right.,\,\,\,\,\, -5\leq x\leq 10$
+
+\item[Função 7: Kursawe]
+
+$\stackbin[x\in\mathbb{R}^3]{}{\mathrm{min}} \left\{%
+\begin{array}{rcl}
+    f_1(x)&=&\displaystyle\sum_{i=1}^2\left[-10\exp\left(-0.2\sqrt{x_i^2+x_{i+1}^2}\right)\right]\\
+    f_2(x)&=&\displaystyle\sum_{i=1}^3\left[|x_i|^{0.8}+5\sin(x_i^3)\right]
+\end{array}%
+\right.,\,\,\,\,\, -5\leq x\leq 5, 1\leq i\leq 3$
+\end{description}
+
+\end{document}
